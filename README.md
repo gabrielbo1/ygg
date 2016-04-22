@@ -34,7 +34,7 @@ Para a implementação do projeto, serão utilizadas tecnologias _Open Source_, 
 
 ### Proposta do Projeto
 
-Leia a proposta do projeto [neste link](https://github.com/gabrielbo1/ygg)
+Leia a proposta do projeto [neste link](https://github.com/gabrielbo1/ygg/blob/master/Documentos/Proposta%20YGG.md)
 
 ### Agradecimentos
 
