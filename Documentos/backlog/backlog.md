@@ -2,7 +2,8 @@
 
 ###Backlog projeto Ygg###
 
-####Funcionalidades####			      
+####Funcionalidades####
+			      
 Nº  | Descrição                                                                        |
 ----|----------------------------------------------------------------------------------|
 1   |Cadastro de usuário                                                               |
