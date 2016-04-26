@@ -6,12 +6,12 @@ Para o projeto ser desenvolvido, os seguintes participantes estão envolvidos na
 
 Nome             |            Papel           |  Competências
 -----------------------------|----------------------------|---------
-Gabriel Barbosa   | _Não definido_     |  Aluno do 5* Periodo de Eng. de Software
-João Henrique  | _Não definido_    | Aluno do 5* Periodo de Eng. de Software
-Lucas Vinicios   | _Não definido_          | Aluno do 5* Periodo de Eng. de Software
-Pedro Victor     | _Não definido_  | Aluno do 5* Periodo de Eng. de Software
-Raphael Ferreira          | _Não definido_   | Aluno do 5* Periodo de Eng. de Software
-Rony Nogueira    | _Não definido_ | Aluno do 5* Periodo de Eng. de Software
+Gabriel Barbosa   | _Developer_     |  Aluno do 5* Periodo de Eng. de Software
+João Henrique  | _Developer_    | Aluno do 5* Periodo de Eng. de Software
+Lucas Vinicios   | _Developer_          | Aluno do 5* Periodo de Eng. de Software
+Pedro Victor     | _Developer_  | Aluno do 5* Periodo de Eng. de Software
+Raphael Ferreira          | _Product Owner_   | Aluno do 5* Periodo de Eng. de Software
+Rony Nogueira    | _Scrum Master_ | Aluno do 5* Periodo de Eng. de Software
 ---------
 _Em aberto até a conclusão do projeto_
 
