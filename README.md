@@ -36,6 +36,9 @@ Para a implementação do projeto, serão utilizadas tecnologias _Open Source_, 
 
 Leia a proposta do projeto [neste link](https://github.com/gabrielbo1/ygg/blob/master/Documentos/Proposta%20YGG.md)
 
+### Local do Projeto
+O projeto pode ser acesso [clicando aqui](http://ygg.pe.hu/ 'Acessar Site')
+
 ### Agradecimentos
 
 _Em aberto até os participantes digitarem aqui_
