@@ -6,12 +6,13 @@ Para o projeto ser desenvolvido, os seguintes participantes estão envolvidos na
 
 Nome             |            Papel           |  Competências
 -----------------------------|----------------------------|---------
-Gabriel Barbosa   | _Developer_     |  Aluno do 5* Periodo de Eng. de Software
-João Henrique  | _Developer_    | Aluno do 5* Periodo de Eng. de Software
-Lucas Vinicios   | _Developer_          | Aluno do 5* Periodo de Eng. de Software
-Pedro Victor     | _Developer_  | Aluno do 5* Periodo de Eng. de Software
-Raphael Ferreira          | _Product Owner_   | Aluno do 5* Periodo de Eng. de Software
-Rony Nogueira    | _Scrum Master_ | Aluno do 5* Periodo de Eng. de Software
+Gabriel Barbosa   | _Desenvolvedor Front-End_     |  Aluno do 5* Periodo de Eng. de Software
+Guilherme  | _Gerente de Configuração_     |  Aluno do 5* Periodo de Eng. de Software
+João Henrique  | _Desenvolvedor Front-End_    | Aluno do 5* Periodo de Eng. de Software
+Lucas Vinicios   | _Desenvolvedor Back-End_          | Aluno do 5* Periodo de Eng. de Software
+Pedro Victor     | _Gerente de Configuração_  | Aluno do 5* Periodo de Eng. de Software
+Raphael Ferreira          | _Desenvolvedor Front-End_   | Aluno do 5* Periodo de Eng. de Software
+Rony Nogueira    | _Gerente de Projeto_ | Aluno do 5* Periodo de Eng. de Software
 ---------
 _Em aberto até a conclusão do projeto_
 
@@ -22,22 +23,25 @@ Para o desenvolvimento do projeto serão utilizadas ferramentas para auxiliar na
 - [Trello](https://trello.com) - _Controle de atividades (Pendentes, em execução e realizadas)_ 
 - [Github](https://github.com) - _Controle de versão do código fonte do projeto_
 - [Google Docs](https://docs.google.com/) - _Controle de documentação  externa do projeto_
+- [Hangouts](https://hangouts.google.com) - _Comunicação e reuniões online da equipe_
 
 
 ### Tecnologias utilizadas - Implementação
 
 Para a implementação do projeto, serão utilizadas tecnologias _Open Source_, são elas:
 
-- [AngularJS](https://angularjs.org/)
-- [MongoDB](https://www.mongodb.org/)
+- [Angular2](https://angular.io/)
+- [MySQL](https://www.mysql.com/)
 - [Materialize CSS](http://materializecss.com/)
+- [SlimFramework PHP](http://www.slimframework.com/)
+- [AnimateCSS](https://daneden.github.io/animate.css/)
 
 ### Proposta do Projeto
 
 Leia a proposta do projeto [neste link](https://github.com/gabrielbo1/ygg/blob/master/Documentos/Proposta%20YGG.md)
 
 ### Local do Projeto
-O projeto pode ser acesso [clicando aqui](http://ygg.pe.hu/ 'Acessar Site')
+O projeto pode ser acessado [clicando aqui](http://ygg.pe.hu/ 'Acessar Site')
 
 ### Agradecimentos
 
