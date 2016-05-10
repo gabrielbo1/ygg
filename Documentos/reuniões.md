@@ -18,3 +18,8 @@ no desenvolvimento da aplicação.
 - Reunião realizada com o membro da equipe Gabriel Barbosa para definição dos protocolos de comunicação entre o front-end e o back-end
 da aplicação.
 - Definição do Banco de Dados do projeto
+
+#### Reunião Presencial - 09/05/2016 de 20:30 as 20:45
+
+- Esclarecimento sas últimas definições realizadas.
+- Conversa entre os integrantes para a definição do cronograma de construção.
