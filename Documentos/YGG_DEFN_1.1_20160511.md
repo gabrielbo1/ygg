@@ -7,19 +7,20 @@ Neste documento são definidos os padrões de comunicação entre as partes da a
 
 As requisições deverão ser feitas utilizam o protocolo _POST_ ou _GET_ do HTTP.
 
-*_POST_*
+`POST`
 
 As requsições para **inserção** e **atualização** de dados devem ser realizadas utilizando o método _POST_.
 
-*_GET_*
+`GET`
 
 As requisições para **seleção de dados** e para **apagar** registros 
 
 
 **Resposta**
 
-A resposta de uma requisão deverá utilizar o _JavaScript Object Notation_, ou JSON, e deverá ser composta dos seguintes parâmetros:
+A resposta de uma requisão deverá utilizar o `JavaScript Object Notation` (JSON), e deverá ser composta dos seguintes parâmetros:
 
-|Parâmetro| Valores|
-|---------|--------|
-|_status_ | Para o processamento com sucesso, o valor será "ok", caso contrário, o valor será a mensagem de erro|
+|Parâmetro| Sucesso| Falha | Padrão|
+|---------|--------|-------|-------|
+|_status_ | OK     | Mensagem de Erro| _String Vazia ""_|
+|_dados_  | JSON Array| _String Vazia ""_| _String Vazia ""_|
