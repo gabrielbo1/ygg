@@ -23,3 +23,8 @@ da aplicação.
 
 - Esclarecimento sas últimas definições realizadas.
 - Conversa entre os integrantes para a definição do cronograma de construção.
+
+#### Reunião Presencial - 10/05/2016 de 20:20 as 20:40 
+
+- Exposição de problemas relacionados ao desenvolvimento
+- Atualização das definições de comunicação entre as partes do projeto
