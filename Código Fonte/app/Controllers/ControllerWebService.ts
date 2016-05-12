@@ -7,7 +7,7 @@
 */
 
 import { Subscriber }                   from 'rxjs/Subscriber';
-import { Response   }                   from 'angular2/http';
+import { Response   }                   from '@angular/http';
 
 export class ControllerWebService extends Subscriber<Response>{
     

@@ -15,7 +15,7 @@
 
 import {EntidadeBanco} from '../Models/EntidadeBanco';
 import {Subscriber}     from 'rxjs/Subscriber';
-import {Http, Response} from 'angular2/http';
+import {Http, Response} from '@angular/http';
 
 
 export class GenericDAO {
