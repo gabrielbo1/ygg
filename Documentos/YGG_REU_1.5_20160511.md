@@ -28,3 +28,10 @@ da aplicação.
 
 - Exposição de problemas relacionados ao desenvolvimento
 - Atualização das definições de comunicação entre as partes do projeto
+
+
+#### Reunião Presencial - 11/05/2016 de 20:20 as 20:35 
+
+- Esclarecimento de dúvidas e definições pendentes entre os integrantes da equipe de Front-End, coordenados pelo Gerente do Front-End Gabriel Barbosa
+- Adição de integrante Guilherme Caixeta à equipe de desenvolvimento do Projeto
+- Definição de papéis do novo integrante da equipe de desenvolvimento
