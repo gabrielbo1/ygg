@@ -44,7 +44,7 @@ Leia a proposta do projeto [neste link](https://github.com/gabrielbo1/ygg/blob/m
 
 ###Acompanhamento das Atividades do Projeto
 
-Acompanhe as atividades e tempo de resolução atríbuidas a cada membro da equipe [neste link] (https://trello.com/b/2DNd4uSo/projeto-ygg).
+Acompanhe as atividades, atríbuidas a cada membro da equipe e o tempo de resolução das mesmas [neste link] (https://trello.com/b/2DNd4uSo).
 
 ### Local do Projeto
 O projeto pode ser acessado [clicando aqui](http://ygg.pe.hu/ 'Acessar Site').
