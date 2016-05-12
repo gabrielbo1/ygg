@@ -106,7 +106,36 @@ function usuario(Request $requisicao, Response $retorno){
  * @return JSON String
  * */
 function login(Request $requisicao, Response $retorno){
-    //Lógica Aqui
+    $email = $requisicao->getAttribute('email');
+    $senha = $requisicao->getAttribute('senha');
+	
+  
+    if($email!='' && $senha!=''){
+      $sql = "SELECT * FROM usuarios WHERE usEmail=:email and usSenha=:senha";
+
+      try{
+        $bancoDados         = conexaoBancoDados();
+        $consulta           = $bancoDados->prepare($sql);
+        $consulta->bindParam('email',$email);
+        $consulta->bindParam('senha',$senha);
+        $consulta->execute();
+        $usuario 			 = $consulta->fetchObject();
+        if (count($usuario) > 0) {
+            session_start();
+            $_SESSION['usEmail'] = $usuario->usEmail;
+            $_SESSION['usID'] = $usuario->usID;
+            $resposta = array("status"=>"OK","dados"=>"");
+        }else{
+              $resposta = array("status"=>"Email ou Senha Incorretos","dados"=>"");
+        }
+      }catch(PDOException $e){
+          $resposta = array("status"=>"Erro de BD","dados"=>"");
+      }
+    }else{
+      $resposta = array("status"=>"Email e senha devem ser informados","dados"=>"");
+    }
+  
+    $retorno->getBody()->write(json_encode($resposta));
 }
 /*
  * Função responsável por realizar o logout de um usuario no sistema.
