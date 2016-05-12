@@ -144,7 +144,9 @@ function login(Request $requisicao, Response $retorno){
  * @return JSON String
  * */
 function logout(Request $requisicao, Response $retorno){
-    //Lógica Aqui
+    session_destroy();
+    $resposta = array("status"=>"OK","dados"=>"");    
+    $retorno->getBody()->write(json_encode($resposta));
 }
 /*
  * Função responsável por estabelecer a conexão com o Banco de Dados
