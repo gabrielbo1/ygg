@@ -14,7 +14,7 @@ João Henrique  | _Desenvolvedor Front-End_    | Aluno do 5* Periodo de Eng. de 
 Lucas Vinicios   | _Desenvolvedor Back-End_          | Aluno do 5* Periodo de Eng. de Software
 Pedro Victor     | _Gerente de Configuração e Desenvolvedor Back-End_   | Aluno do 5* Periodo de Eng. de Software
 Raphael Ferreira          | _Desenvolvedor Front-End_   | Aluno do 5* Periodo de Eng. de Software
-Rony Nogueira    | _Gerente de Projeto e Desenvolvedor Back-End__ | Aluno do 5* Periodo de Eng. de Software
+Rony Nogueira    | _Gerente de Projeto e Desenvolvedor Back-End_ | Aluno do 5* Periodo de Eng. de Software
 ---------
 _Em aberto até a conclusão do projeto_
 
