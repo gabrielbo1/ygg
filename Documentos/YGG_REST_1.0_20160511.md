@@ -10,15 +10,18 @@ As requisições e respostas seguem o padrão definido no documento de [Definiç
 ##### Definição da URL Base
 
 A `URL Base` é o caminho padrão para a realização das requisições. 
-A URL é composta pela concatenação da `URL Base` com o nome da função, segue exemplo:
+A URL é composta pela concatenação da `URL Base` com o nome da função.
+
+
+**Exemplo**
 
 `http://urlbaseprojeto.com.br/rest/funcionalidade`
 
-**Valor da URL Base:** `http://ygg.pe.hu/rest`
+**URL Base:** `http://ygg.pe.hu/rest`
 
 ##### Definição das URLs
 
-`http://ygg.pe.hu/rest/cadastro`
+`cadastro`
 
 Método: _POST_
 
@@ -26,11 +29,12 @@ Função responsável por realizar o cadastro de um usuário no sistema sem ser 
 
 |Parâmetros|Tipo|
 |----------|-------|
-|Nome      | _String_ |
+|nome      | _String_ |
 |email     | _String_|
 |senha     | _String_|
 
-`http://ygg.pe.hu/rest/cadastroRedeSocial`
+
+`cadastroRedeSocial`
 
 Método: _POST_
 
@@ -38,7 +42,7 @@ Função responsável por realizar o cadastro de um usuário no sistema através
 
 *A Definir*
 
-`http://ygg.pe.hu/rest/login`
+`login`
 
 Método: _GET_
 
@@ -49,7 +53,8 @@ Função responsável por realizar a autenticação dos dados de um usuário cad
 |email     |_String_|
 |senha     |_String_|
 
-`http://ygg.pe.hu/rest/loginRedeSocial`
+
+`loginRedeSocial`
 
 Método: _GET_
 
@@ -57,27 +62,28 @@ Função responsável por realizar a autenticação de um usuário cadastrado vi
 
 *A Definir*
 
-`http://ygg.pe.hu/rest/usuario`
+`usuario/<usID>`
 
 Método: _GET_
 
 |Parâmetros| Tipo|
 |----------|--------|
 |usID      | _Integer_|
-|sessionID | _String_|
 
-`http://ygg.pe.hu/rest/apagar`
+`usuario/<usID>`
 
-Função responsável por alterar a situação de um usuário para **excluido**.
+Método: _DELETE_
+
+Função responsável por alterar a situação de um usuário para **excluído**.
 
 |Parâmetros|Tipo|
 |----------|-----|
 |usID      |_Integer_|
 
 
-`http://ygg.pe.hu/rest/atualizarPerfil`
+`usuario/<usID>`
 
-Método: _POST_
+Método: _PUT_
 
 Função responsável por atualizar o perfil de um usuário.
 
