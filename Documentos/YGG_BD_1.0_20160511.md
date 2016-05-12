@@ -18,6 +18,7 @@ As tabelas utilizadas na aplicação serão:
 |usSenha        | _varchar(32)_                    | _Não_   | _Não_ |
 |usIDRedeSocial |_decimal(21,0)_                   | _Não_   | _Sim_ |
 |usRedeSocial   | _enum('Google','Facebook','YGG')_| _Não_   | _Não_ |
+|usSituacao		| _enum('Ativo','Excluido')_	   | _Não_	 | _Não_ |
 |usMomento      | _datetime_                       | _Não_   | _Não_ |
 
 
@@ -28,7 +29,7 @@ As tabelas utilizadas na aplicação serão:
 |acID     | _integer_ | _Não_ | _Sim_ |
 |acSession| _text_    | _Não_ | _Não_ |
 |acUsuario| _integer_ | _Não_ | _Não_ |
-|acLogado | _boolean_ | _Não_ | _Não_ | 
+|acLogado | _boolean_ | _Não_ | _Não_ |
 |acMomento| _datetime_| _Não_ | _Não_ |
 
 **arvore**
@@ -39,7 +40,7 @@ As tabelas utilizadas na aplicação serão:
 |arIDUsuario| _integer_   | _Não_ | _Não_|
 |arTitulo   | _integer_   | _Não_ | _Não_|
 |arDescricao| _text_      | _Não_ | _Não_|
-|arJSON     | _longtext_  |_Não_  | _Não_|
+|arJSON     | _longtext_  | _Não_ | _Não_|
 |arMomento  | _longtext_  | _Não_ | _Não_|
 
 
@@ -50,7 +51,7 @@ As tabelas utilizadas na aplicação serão:
 |geID      | _integer_  | _Não_    | _Sim_ |
 |geIDDono  | _integer_  | _Não_    | _Não_ |
 |geIDArvore| _integer_  | _Não_    | _Não_ |
-|geMomento | _datetime_ | _Não_    | _Não_ | 
+|geMomento | _datetime_ | _Não_    | _Não_ |
 
 **particpantes**
 
@@ -58,4 +59,4 @@ As tabelas utilizadas na aplicação serão:
 |---------------|-----------|----------|------- |
 |paID           | _integer_ | _Não_    | _Sim_  |
 |paIDUsuario    | _integer_ | _Não_    | _Não_  |
-|paIDGrupoEstudo| _integer_ | _Não_    | _Não_  | 
+|paIDGrupoEstudo| _integer_ | _Não_    | _Não_  |
