@@ -5,9 +5,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var navbar_component_1 = require('./Componentes/navbar.component');
@@ -26,17 +23,15 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'my-app',
             templateUrl: "app/app.component.html",
-            directives: [navbar_component_1.NavBarComponent, footer_component_1.FooterComponent, router_1.ROUTER_DIRECTIVES],
+            directives: [navbar_component_1.NavBarComponent, footer_component_1.FooterComponent, router_1.ROUTER_DIRECTIVES]
         }),
         router_1.Routes([
             // {path: '/home', component: HomeView},
             { path: '/home', component: home_view_1.HomeView },
             { path: '/entrar', component: entrar_view_1.EntrarView },
             { path: '/cadastrar', component: cadastrar_view_1.CadastrarView }
-        ]), 
-        __metadata('design:paramtypes', [router_1.Router])
+        ])
     ], AppComponent);
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map

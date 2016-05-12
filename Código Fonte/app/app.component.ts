@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Routes, Router, ROUTER_DIRECTIVES } from '@angular/router';
+import { Component, OnInit } from 'angular2/core';
+import { RouteConfig, Router, ROUTER_DIRECTIVES } from 'angular2/router';
 
 import { NavBarComponent } from './Componentes/navbar.component';
 import { FooterComponent } from './Componentes/footer.component';  
@@ -13,7 +13,7 @@ import { CadastrarView } from './Views/cadastrar.view';
   templateUrl: `app/app.component.html`,
   directives: [NavBarComponent, FooterComponent, ROUTER_DIRECTIVES],
 })
-@Routes([
+@RouteConfig(([
   // {path: '/home', component: HomeView},
   {path: '/home', component: HomeView},
   {path: '/entrar', component: EntrarView},
