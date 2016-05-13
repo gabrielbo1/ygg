@@ -161,34 +161,39 @@ function logout(Request $requisicao, Response $retorno){
 	
   
     if(is_numeric($usuarioID)){
-      
 
       try{
         $bancoDados         = conexaoBancoDados();
         
         $sql = "SELECT * FROM acessos WHERE acIDUsuario=:acIDusu";
         $consulta           = $bancoDados->prepare($sql);
-        $consulta->bindParam('usID',$usuarioID);
+        $consulta->bindParam('acIDusu',$usuarioID);
         $consulta->execute();
-        $usuario 			 = $consulta->fetchObject();
-        if($usuario->acLogado==1){
-          $sql = "SELECT * FROM usuarios WHERE usuarioID=:usID";
-        
-            $consulta           = $bancoDados->prepare($sql);
-            $consulta->bindParam('usID',$usuarioID);
-            $consulta->execute();
+
+        if($consulta->rowCount()>0){
             $usuario 			 = $consulta->fetchObject();
-            if (count($usuario) > 0) {
-                $resposta = array("status"=>"OK","dados"=>$usuario);
+            if($usuario->acLogado==1){
+                $sql = "SELECT * FROM usuarios WHERE usID=:usID";
+
+                $consulta           = $bancoDados->prepare($sql);
+                $consulta->bindParam('usID',$usuario->usID);
+                $consulta->execute();
+
+                if ($consulta->rowCount()>0) {
+                    $usuario 			 = $consulta->fetchObject();
+                    $resposta = array("status"=>"OK","dados"=>$usuario);
+                }else{
+                    $resposta = array("status"=>"Usuário inexistente!","dados"=>"");
+                }
             }else{
-                $resposta = array("status"=>"Usuário inexistente!","dados"=>"");
-            }  
+                $resposta = array("status"=>"Usuário não logado!","dados"=>"");
+            }
         }else{
              $resposta = array("status"=>"Usuário não logado!","dados"=>"");
         }
         
       }catch(PDOException $e){
-          $resposta = array("status"=>"Erro de BD","dados"=>"");
+          $resposta = array("status"=>"Erro de Banco de Dados","dados"=>"");
       }
     }else{
       $resposta = array("status"=>"Um usuário existente deve ser informado!","dados"=>"");
@@ -199,17 +204,16 @@ function logout(Request $requisicao, Response $retorno){
 /*
  * Função responsável por deletar os dados de um usuário
  * @param $usID integer
- * @param $sessionID integer
  * @author Lucas Vinicios
  * @version 1.0
  * @return JSON String
  * */
- function excluir(Request $requisicao, Response $retorno){
+ function apagar(Request $requisicao, Response $retorno){
     $usuarioID = $requisicao->getAttribute('usID');
 	
   
-    if($usuarioID > 0 ){
-      $sql = "DELETE * FROM usuarios WHERE usuarioID=:usID";
+    if(is_numeric($usuarioID)){
+      $sql = "DELETE FROM usuarios WHERE usuarioID=:usID";
 
       try{
         $bancoDados         = conexaoBancoDados();
