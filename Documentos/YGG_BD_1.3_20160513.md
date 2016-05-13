@@ -26,9 +26,7 @@ As tabelas utilizadas na aplicação serão:
 
 |**Campo**|**Tipo**   | **Null** | **PK**|
 |---------|-----------|-------|-------|
-|acID     | _integer_ | _Não_ | _Sim_ |
-|acSession| _text_    | _Não_ | _Não_ |
-|acUsuario| _integer_ | _Não_ | _Não_ |
+|acIDUsuario|_integer_|_Não_|_Sim_|
 |acLogado | _boolean_ | _Não_ | _Não_ |
 |acMomento| _datetime_| _Não_ | _Não_ |
 
