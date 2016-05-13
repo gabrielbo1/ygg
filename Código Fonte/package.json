@@ -1,7 +1,7 @@
 {
-  "name": "angular2-quickstart",
+  "name": "ygg",
   "version": "1.0.0",
-  "description": "QuickStart package.json from the documentation, supplemented with testing support",
+  "description": "Projeto de Gerencia de Projeto. Projeto Ygg, Codigo aberto github ",
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
     "e2e": "tsc && concurrently \"http-server\" \"protractor protractor.config.js\"",
@@ -13,7 +13,7 @@
     "typings": "typings"
   },
   "keywords": [],
-  "author": "",
+  "author": "Rony Nogueira, Raphael Ferreira, Pedro Victor, Lucas Vinicios, João Henrique e Gabriel Barbosa.",
   "license": "ISC",
   "dependencies": {
     "@angular/common":  "2.0.0-rc.1",

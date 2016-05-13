@@ -1,5 +1,4 @@
-##Instituto de Informática - Universidade Federal de Goiás ##
-## Gerência de Projeto de Software 2016/1 
+##Instituto de Informática - Universidade Federal de Goiás - Gerência de Projeto de Software 2016/1 
 
 
 Repósito referente ao projeto que será desenvolvido na disciplina de Gerência de Projetos de Software, ministrada pela [Professora Adriana Silveira](mailto:adriana@estrategia.eti.br).
@@ -14,7 +13,7 @@ João Henrique  | _Desenvolvedor Front-End_    | Aluno do 5* Periodo de Eng. de 
 Lucas Vinicios   | _Desenvolvedor Back-End_          | Aluno do 5* Periodo de Eng. de Software
 Pedro Victor     | _Gerente de Configuração e Desenvolvedor Back-End_   | Aluno do 5* Periodo de Eng. de Software
 Raphael Ferreira          | _Desenvolvedor Front-End_   | Aluno do 5* Periodo de Eng. de Software
-Rony Nogueira    | _Gerente de Projeto e Desenvolvedor Back-End__ | Aluno do 5* Periodo de Eng. de Software
+Rony Nogueira    | _Gerente de Projeto e Desenvolvedor Back-End_ | Aluno do 5* Periodo de Eng. de Software
 ---------
 _Em aberto até a conclusão do projeto_
 
@@ -44,7 +43,7 @@ Leia a proposta do projeto [neste link](https://github.com/gabrielbo1/ygg/blob/m
 
 ###Acompanhamento das Atividades do Projeto
 
-Acompanhe as atividades e tempo de resolução atríbuidas a cada membro da equipe [neste link] (https://trello.com/b/2DNd4uSo/projeto-ygg).
+Acompanhe as atividades atribuídas a cada membro da equipe e o tempo de resolução das mesmas [neste link] (https://trello.com/b/2DNd4uSo).
 
 ### Local do Projeto
 O projeto pode ser acessado [clicando aqui](http://ygg.pe.hu/ 'Acessar Site').
