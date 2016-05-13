@@ -103,27 +103,32 @@ function usuario(Request $requisicao, Response $retorno){
  * @param $email String
  * @param $senha Sring
  * @author Pedro Victor
+ * @version 1.1
  * @return JSON String
  * */
 function login(Request $requisicao, Response $retorno){
+    $body = $requisicao->getParsedBody();
     $email = $requisicao->getAttribute('email');
     $senha = $requisicao->getAttribute('senha');
 	
   
-    if($email!='' && $senha!=''){
+    if($email!='' && $senha!=''&& filter_var($email,FILTER_VALIDATE_EMAIL)){
       $sql = "SELECT * FROM usuarios WHERE usEmail=:email and usSenha=:senha";
 
       try{
         $bancoDados         = conexaoBancoDados();
         $consulta           = $bancoDados->prepare($sql);
         $consulta->bindParam('email',$email);
-        $consulta->bindParam('senha',$senha);
+        $consulta->bindParam('senha',md5(&email.$senha));
         $consulta->execute();
-        $usuario 			 = $consulta->fetchObject();
-        if (count($usuario) > 0) {
-            session_start();
-            $_SESSION['usEmail'] = $usuario->usEmail;
-            $_SESSION['usID'] = $usuario->usID;
+        if ($consulta->rowCount() > 0) {
+            $usuario        = $consulta->fetchObject();
+            $logado              = 1;
+            $sql                 = "REPLACE INTO acessos (acIDUsuario,acLogado,acMomento) VALUES (:acIDUsuario,:acLogado,now())";
+            $consulta            = $bancoDados->prepare($sql);
+            $consulta->bindParam("acIDUsuario",$usuario->usID);
+            $consulta->bindParam("acLogado",$logado);
+            $consulta->execute();
             $resposta = array("status"=>"OK","dados"=>"");
         }else{
               $resposta = array("status"=>"Email ou Senha Incorretos","dados"=>"");
@@ -141,11 +146,110 @@ function login(Request $requisicao, Response $retorno){
  * Função responsável por realizar o logout de um usuario no sistema.
  * @param $usID integer
  * @author Pedro Victor
+ * @version 1.1
  * @return JSON String
  * */
 function logout(Request $requisicao, Response $retorno){
-    session_destroy();
-    $resposta = array("status"=>"OK","dados"=>"");    
+    $usID           = $requisicao->getAttribute("usID");
+    if(is_numeric($usID)){
+        try {
+            $logado     = 0;
+            $sql        = "REPLACE INTO acessos (acIDUsuario,acLogado,acMomento) VALUES (:acIDUsuario,:acLogado,now())";
+            $bancoDados = conexaoBancoDados();
+            $consulta   = $bancoDados->prepare($sql);
+            $consulta->bindParam("acIDUsuario",$usID);
+            $consulta->bindParam("acLogado",$logado);
+            $consulta->execute();
+            $resposta = array("status"=>"OK","dados"=>"");
+        }catch(PDOException $e){
+            $resposta = array("status"=>"Erro no banco de dados","dados"=>"");
+        }
+    }else{
+        $resposta = array("status"=>"Identificador inválido","dados"=>"");
+    }
+    $retorno->getBody()->write(json_encode($resposta));
+}
+/*
+ * Função responsável por buscar os dados de um usuário
+ * @param $usID integer
+ * @param $sessionID integer
+ * @author Lucas Vinicios
+ * @version 1.0
+ * @return JSON String
+ * */
+ function usuario(Request $requisicao, Response $retorno){
+    $usuarioID = $requisicao->getAttribute('usID');
+	
+  
+    if(is_numeric($usuarioID)){
+
+      try{
+        $bancoDados         = conexaoBancoDados();
+        
+        $sql = "SELECT * FROM acessos WHERE acIDUsuario=:acIDusu";
+        $consulta           = $bancoDados->prepare($sql);
+        $consulta->bindParam('acIDusu',$usuarioID);
+        $consulta->execute();
+
+        if($consulta->rowCount()>0){
+            $usuario 			 = $consulta->fetchObject();
+            if($usuario->acLogado==1){
+                $sql = "SELECT * FROM usuarios WHERE usID=:usID";
+
+                $consulta           = $bancoDados->prepare($sql);
+                $consulta->bindParam('usID',$usuario->usID);
+                $consulta->execute();
+
+                if ($consulta->rowCount()>0) {
+                    $usuario 			 = $consulta->fetchObject();
+                    $resposta = array("status"=>"OK","dados"=>$usuario);
+                }else{
+                    $resposta = array("status"=>"Usuário inexistente!","dados"=>"");
+                }
+            }else{
+                $resposta = array("status"=>"Usuário não logado!","dados"=>"");
+            }
+        }else{
+             $resposta = array("status"=>"Usuário não logado!","dados"=>"");
+        }
+        
+      }catch(PDOException $e){
+          $resposta = array("status"=>"Erro de Banco de Dados","dados"=>"");
+      }
+    }else{
+      $resposta = array("status"=>"Um usuário existente deve ser informado!","dados"=>"");
+    }
+  
+    $retorno->getBody()->write(json_encode($resposta));
+}
+/*
+ * Função responsável por deletar os dados de um usuário
+ * @param $usID integer
+ * @author Lucas Vinicios
+ * @version 1.0
+ * @return JSON String
+ * */
+ function apagar(Request $requisicao, Response $retorno){
+    $usuarioID = $requisicao->getAttribute('usID');
+	
+  
+    if(is_numeric($usuarioID)){
+      $sql = "DELETE FROM usuarios WHERE usuarioID=:usID";
+
+      try{
+        $bancoDados         = conexaoBancoDados();
+        $consulta           = $bancoDados->prepare($sql);
+        $consulta->bindParam('usID',$usuarioID);
+        $consulta->execute();
+       
+        $resposta = array("status"=>"OK","dados"=>"");
+      }catch(PDOException $e){
+          $resposta = array("status"=>"Erro de BD","dados"=>"");
+      }
+    }else{
+      $resposta = array("status"=>"Um usuário existente deve ser informado!","dados"=>"");
+    }
+  
     $retorno->getBody()->write(json_encode($resposta));
 }
 /*
