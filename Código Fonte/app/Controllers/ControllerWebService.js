@@ -46,6 +46,13 @@ System.register(['rxjs/Subscriber'], function(exports_1, context_1) {
                 };
                 ControllerWebService.prototype.casoErroRede = function () {
                 };
+                Object.defineProperty(ControllerWebService.prototype, "_status", {
+                    get: function () {
+                        return this.status;
+                    },
+                    enumerable: true,
+                    configurable: true
+                });
                 return ControllerWebService;
             }(Subscriber_1.Subscriber));
             exports_1("ControllerWebService", ControllerWebService);

@@ -10,6 +10,7 @@ export class WebSerivceUsuarios extends GenericDAO{
     login( usuario: Usuarios, subscriber: Subscriber<Response>){
         this._urlFind = "";
         this.find( usuario, subscriber);
+        console.log("Passou por aqui");
     }
     
     logout( usuario: Usuarios, subscriber: Subscriber<Response>){

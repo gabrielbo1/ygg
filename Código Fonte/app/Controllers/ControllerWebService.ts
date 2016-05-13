@@ -39,6 +39,10 @@ export class ControllerWebService extends Subscriber<Response>{
     casoErroRede(): void{
         
     }
+    
+    get _status (): StatusWebService{
+        return this.status;
+    }
 }
 
 class StatusWebService {
@@ -53,3 +57,4 @@ class StatusWebService {
         return this.status;
     }
 }
+

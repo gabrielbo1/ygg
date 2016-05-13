@@ -31,6 +31,15 @@ System.register(['./GenericDAO', '@angular/core'], function(exports_1, context_1
                 function WebSerivceUsuarios() {
                     _super.apply(this, arguments);
                 }
+                WebSerivceUsuarios.prototype.login = function (usuario, subscriber) {
+                    this._urlFind = "";
+                    this.find(usuario, subscriber);
+                    console.log("Passou por aqui");
+                };
+                WebSerivceUsuarios.prototype.logout = function (usuario, subscriber) {
+                    this._urlFind = "";
+                    this.find(usuario, subscriber);
+                };
                 WebSerivceUsuarios = __decorate([
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [])

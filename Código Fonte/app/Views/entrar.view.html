@@ -5,18 +5,20 @@
 	<div class="card-panel">
 		<h3 class="center-align">Acesso ao YGG</h3>
 		<div class="row">
-			<form class="col s8 offset-s2">
+			<form class="col s8 offset-s2 form-group">
 				<div class="row">
 					<div class="input-field col s12">
-						<input id="email" type="email" class="validate center-align" name="email" autofocus>
+						<input id="email" type="email" class="form-control validate center-align" required="true" 
+						[(ngModel)] = "usuarios.usNome" name="email" autofocus>
 						<label for="email">E-mail</label>
 					</div>
 					<div class="input-field col s12">
-						<input id="senha" type="password" class="validate center-align" name="senha">
+						<input id="senha" required="true" type="password" class="form-control validate center-align" 
+						[(ngModel)] = "usuarios.usSenha" name="senha">
 						<label for="senha">Senha</label>
 						<p class="right-align">Não possui conta? <a [routerLink]="['/cadastrar']">Cadastre-se!</a></p>
 						<p class="center-align">
-							<button type="submit" class="btn waves waves-effect green lighten-1">Entrar
+							<button type="submit" class="btn waves waves-effect green lighten-1" (click)="login()" >Entrar
 								<i class="material-icons right">launch</i>
 							</button>
 						</p>
