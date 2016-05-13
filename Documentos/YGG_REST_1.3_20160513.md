@@ -44,7 +44,7 @@ Função responsável por realizar o cadastro de um usuário no sistema através
 
 `login`
 
-Método: _GET_
+Método: _POST_
 
 Função responsável por realizar a autenticação dos dados de um usuário cadastrado via YGG.
 
@@ -56,11 +56,22 @@ Função responsável por realizar a autenticação dos dados de um usuário cad
 
 `loginRedeSocial`
 
-Método: _GET_
+Método: _POST_
 
 Função responsável por realizar a autenticação de um usuário cadastrado via Redes Sociais.
 
 *A Definir*
+
+`logout/<usID>`
+
+Método: _GET_
+
+Função responsável por realizar o logout de um usuário no sistema.
+
+|Parâmetros| Tipo|
+|----------|-----|
+|usID | _integer_|
+
 
 `usuario/<usID>`
 
@@ -70,7 +81,7 @@ Método: _GET_
 |----------|--------|
 |usID      | _Integer_|
 
-`usuario/<usID>`
+`apagar/<usID>`
 
 Método: _DELETE_
 
@@ -81,7 +92,7 @@ Função responsável por alterar a situação de um usuário para **excluído**
 |usID      |_Integer_|
 
 
-`usuario/<usID>`
+`atualizarPerfil/<usID>`
 
 Método: _PUT_
 
